@@ -1,9 +1,9 @@
 @font-face {
     font-family: "Muller";
-    src: url("../src/assets/Muller-Trial-Medium.ttf");
+    src: url("./assets/Muller-Trial-Medium.ttf");
 }
 
 @font-face {
     font-family: "MullerBolder";
-    src: url("../src/assets/Muller-Trial-ExtraBold.ttf");
+    src: url("./assets/Muller-Trial-ExtraBold.ttf");
 }

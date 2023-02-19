@@ -20,7 +20,7 @@ export class PizzaItemComponent {
   imgSrc = new EventEmitter<string>();
 
   getImgSrc(imgName?: string) {
-    return `../../../../assets/pizza/${imgName}`;
+    return `./assets/pizza/${imgName}`;
   }
 
   onClick(event: { target: any; srcElement: any; currentTarget: any; }) {
