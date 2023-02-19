@@ -1,0 +1,48 @@
+<div class="pizza-order">
+    <div class="pizza-order__condition">
+        <p>
+            <span class="pizza-order__condition-title_top">
+                Хватит думать!
+            </span>
+            <span class="pizza-order__condition-title_bottom">
+                Доставим заказ за 30 минут!
+            </span>
+        </p>
+        <p class="pizza-order__condition-text">
+
+            Мы  гарантированно доставим вашу пиццу за 30 минут с момента оформления заказа.
+            Если мы опоздаем даже на 1 минуту - вы получаете весь заказ бесплатно и ваучер на скидку на следующий заказ.
+            Мы гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
+        </p>
+    </div>
+    <div class="pizza-order__form" [formGroup]="pizzaOrderForm">
+        <input type="text" class="pizza-order__form-input" placeholder="Ваше имя" formControlName="name" (keypress)="$event.keyCode !== 190 && $event.keyCode !== 46"/>
+        <input type="text" class="pizza-order__form-input" placeholder="Адрес доставки" formControlName="address" (keypress)="$event.keyCode !== 190 && $event.keyCode !== 46"/>
+        <input type="text" class="pizza-order__form-input" placeholder="Телефон"  formControlName="phone" (keypress)="$event.keyCode !== 190 && $event.keyCode !== 46"/>
+
+        <div [hidden]="pizzaOrderForm.valid || pizzaOrderForm.untouched" class="alert alert-danger">
+            Некорректные данные
+        </div>
+
+        <button 
+            [disabled]="pizzaOrderForm.valid && pizzaOrderForm.untouched || pizzaOrderForm.invalid && pizzaOrderForm.touched "
+            class="pizza-order__form-submit" 
+            (click)="order()" 
+            data-toggle="modal" 
+            data-target=".bd-example-modal-sm"
+            >
+            Оформить заказ
+        </button>
+    </div>
+    <div class="pizza-order__peace">
+        <img class="best-feature__img" src="../../../assets/order/pizzzzza_660.png" alt="кусок пиццы">
+    </div>
+</div>
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      Спасибо за заказ
+    </div>
+  </div>
+</div>

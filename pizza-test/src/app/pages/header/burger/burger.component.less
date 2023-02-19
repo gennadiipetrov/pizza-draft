@@ -1,0 +1,65 @@
+
+    .burger-menu {
+        display: none;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .burger-menu__checkbox {
+        display: none;
+    }
+
+    @media (max-width: 992px) { 
+        .burger-menu {
+            display: block;
+
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.5);
+            transform: translateX(-100%);
+            transition: transform 300ms linear;
+        }
+
+        .burger-menu[data-open] {
+            transform: none;
+        }
+
+        .burger-menu__checkbox {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .burger-menu__checkbox-input {
+            position: absolute;
+            clip: rect(0,0,0,0);
+            opacity: 0;
+        }
+
+        .burger-menu__state {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .burger-menu__checkbox_open {
+            display: block;
+        }
+
+        .burger-menu__checkbox_close {
+            display: none;
+        }
+
+        .burger-menu__checkbox-input:checked ~ .burger-menu__state .burger-menu__checkbox_close {
+            display: block;
+        }
+
+        .burger-menu__checkbox-input:checked ~ .burger-menu__state .burger-menu__checkbox_open {
+            display: none;
+        }
+    }

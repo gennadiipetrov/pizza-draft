@@ -1,0 +1,130 @@
+.pizza-order {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+
+    &__condition {
+        display: flex;
+        flex-direction: column;
+        width: 369px;
+        gap: 70px;
+    }
+
+    &__condition-title_top {
+        font-family: Muller;
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: 800;
+        color: #ffaf18;
+    }
+
+    &__condition-title_bottom {
+        font-family: Muller;
+        font-size: 35px;
+        line-height: 45px;
+        font-weight: 800;
+        color: #b99150;
+    }
+
+    &__condition-text {
+        font-family: Muller;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #b99150;
+    }
+
+    &__condition-text {
+        font-family: Muller;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #b99150;
+    }
+
+    &__condition-text {
+        font-family: Muller;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+        color: #b99150;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    &__form-input {
+        width: 330px;
+        height: 60px;
+        border: 1px solid #b99150;
+
+        font-family: Muller;
+        font-size: 18px;
+        line-height: 45px;
+        font-weight: 400;
+        color: #cba86e;
+
+        padding-left: 24px;
+    }
+
+    &__form-input::placeholder {
+        color: #cba86e;
+    }
+
+    &__form-submit {
+        width: 330px;
+        height: 60px;
+        background-color: #ffaf18;
+
+        font-family: Muller;
+        font-size: 16px;
+        line-height: 55px;
+        font-weight: 700;
+        color: #382400;
+
+        border: 0;
+    }
+}
+
+@media (max-width: 1700px) { 
+    .pizza-order {
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .pizza-order__condition {
+        gap: 20px;
+        width: 100%;
+    }
+
+    .pizza-order__peace {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) { 
+    .pizza-order {
+
+    }
+
+    .pizza-order__condition {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 576px) { 
+    .pizza-order {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .pizza-order__condition {
+        gap: 10px;
+    }
+}

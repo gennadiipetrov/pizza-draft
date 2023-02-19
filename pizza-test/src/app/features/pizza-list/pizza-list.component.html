@@ -1,0 +1,33 @@
+<section class="pizza-list">
+    <h1 class="pizza-list__title">
+        Выберите свою любимую пиццу
+    </h1>
+
+    <div class="pizza-list__assortiment">
+        <ng-container *ngFor="let item of pizzaList$ | async; let i = index">
+            <app-pizza-item
+            [item]="item"
+            [indx]="i"
+            (imgSrc)="setImgSrc($event)"
+            ></app-pizza-item>
+        </ng-container>
+    </div>
+</section>
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" #closebutton class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Предпросмотр</h4>
+        </div>
+        <div class="modal-body">
+        <img
+        src="{{imgSrc}}"
+        style="max-width:100%;cursor:pointer"
+        class="modal-hover-opacity"
+      /> 
+        </div>
+      </div>
+    </div>
+</div>

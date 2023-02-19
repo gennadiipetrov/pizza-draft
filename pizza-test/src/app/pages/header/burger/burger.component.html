@@ -1,0 +1,29 @@
+<label class="burger-menu__checkbox">
+  <input type="checkbox" class="burger-menu__checkbox-input">
+  <div class="burger-menu__state">
+      <div class="burger-menu__checkbox_open" id="burger-menu-open" (click)="onBurgerMenuOpen()">
+          <svg style="width:48px; height:48px"
+          class="checkbox__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 12H21" stroke="#495057" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              <path d="M3 6H21" stroke="#495057" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              <path d="M3 18H21" stroke="#495057" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+      </div>
+
+      <div class="burger-menu__checkbox_close" id="burger-menu-close" (click)="onBurgerMenuClose()">
+          <svg style="width:48px; height:48px" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18" stroke="#212429" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              <path d="M6 6L18 18" stroke="#212429" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+          </svg>
+      </div>
+  </div>
+</label>
+<div class="burger-menu" id="burger-menu" #burgerMenu> 
+  <ng-content></ng-content>
+</div>
